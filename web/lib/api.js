@@ -1,5 +1,7 @@
 import client, { previewClient } from "./sanity";
 
+// Get all Posts
+
 const getUniquePosts = (posts) => {
   const slugs = new Set();
   return posts.filter((post) => {
@@ -71,7 +73,7 @@ export async function getPostAndMorePosts(slug, preview) {
   return { post, morePosts: getUniquePosts(morePosts) };
 }
 
-//////////
+// Get all Listings
 
 const getUniqueListings = (listings) => {
   const slugs = new Set();
@@ -89,6 +91,7 @@ const listingFields = `
   name,
   title,
   excerpt,
+  'category': category->{name},
   'slug': slug.current,
   'coverImage': coverImage.asset->url,
 `;

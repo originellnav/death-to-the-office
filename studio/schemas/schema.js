@@ -13,14 +13,56 @@ export default createSchema({
   types: schemaTypes.concat([
     /* Your types here! */
     {
-      name: "categories",
+      name: "category",
       type: "document",
-      title: "Categories",
+      title: "Category",
       fields: [
         {
           name: "name",
           title: "Name",
           type: "string",
+        },
+      ],
+    },
+    {
+      name: "listing",
+      type: "document",
+      title: "Listing",
+      fields: [
+        {
+          name: "title",
+          title: "Title",
+          type: "string",
+        },
+        {
+          name: "content",
+          title: "Content",
+          type: "array",
+          of: [{ type: "block" }],
+        },
+        {
+          name: "excerpt",
+          title: "Excerpt",
+          type: "string",
+        },
+        {
+          name: "coverImage",
+          title: "Cover Image",
+          type: "image",
+        },
+        {
+          name: "category",
+          title: "Category",
+          type: "reference",
+          to: [{ type: "category" }],
+        },
+        {
+          name: "slug",
+          title: "Slug",
+          type: "slug",
+          options: {
+            source: "title",
+          },
         },
       ],
     },
@@ -77,48 +119,6 @@ export default createSchema({
           title: "Author",
           type: "reference",
           to: [{ type: "author" }],
-        },
-        {
-          name: "slug",
-          title: "Slug",
-          type: "slug",
-          options: {
-            source: "title",
-          },
-        },
-      ],
-    },
-    {
-      name: "listing",
-      type: "document",
-      title: "Listing",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "content",
-          title: "Content",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-        {
-          name: "excerpt",
-          title: "Excerpt",
-          type: "string",
-        },
-        {
-          name: "coverImage",
-          title: "Cover Image",
-          type: "image",
-        },
-        {
-          name: "categories",
-          title: "Categories",
-          type: "reference",
-          to: [{ type: "categories" }],
         },
         {
           name: "slug",

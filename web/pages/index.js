@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import { getAllListingsForHome } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
+import CategoryPreview from "../components/category-preview";
 
 export default function Index({ allListings, preview }) {
   const heroListing = allListings[0];
@@ -13,11 +14,19 @@ export default function Index({ allListings, preview }) {
   return (
     <>
       <Layout preview={preview}>
+        {console.log(allListings)}
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
           <Intro />
+          {allListings.map((listing, index) => (
+            <CategoryPreview
+              key={index}
+              slug={listing.category.name}
+              title={listing.category.name}
+            />
+          ))}
           {heroListing && (
             <HeroListing
               title={heroListing.title}
