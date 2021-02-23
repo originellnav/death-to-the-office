@@ -91,7 +91,7 @@ const listingFields = `
   name,
   title,
   excerpt,
-  'category': category->{name},
+  "categories": categories[].category->name,
   'slug': slug.current,
   'coverImage': coverImage.asset->url,
 `;

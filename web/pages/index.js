@@ -10,7 +10,9 @@ import CategoryPreview from "../components/category-preview";
 
 export default function Index({ allListings, preview }) {
   const heroListing = allListings[0];
-  const moreListings = allListings.slice(1);
+  // const moreListings = allListings.slice(1);
+  const moreListings = allListings;
+
   return (
     <>
       <Layout preview={preview}>
@@ -20,14 +22,7 @@ export default function Index({ allListings, preview }) {
         </Head>
         <Container>
           <Intro />
-          {allListings.map((listing, index) => (
-            <CategoryPreview
-              key={index}
-              slug={listing.category.name}
-              title={listing.category.name}
-            />
-          ))}
-          {heroListing && (
+          {/* {heroListing && (
             <HeroListing
               title={heroListing.title}
               coverImage={heroListing.coverImage}
@@ -36,7 +31,7 @@ export default function Index({ allListings, preview }) {
               slug={heroListing.slug}
               excerpt={heroListing.excerpt}
             />
-          )}
+          )} */}
           {moreListings.length > 0 && <MoreListings listings={moreListings} />}
         </Container>
       </Layout>

@@ -4,131 +4,16 @@ import createSchema from "part:@sanity/base/schema-creator";
 // Then import schema types from any plugins that might expose them
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
-// Then we give our schema to the builder and provide the result to Sanity
+import author from "./documents/author";
+import category from "./documents/category";
+import listing from "./documents/listing";
+import post from "./documents/post";
+
+import categoryReference from "./objects/categoryReference";
+
 export default createSchema({
-  // We name our schema
   name: "default",
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    /* Your types here! */
-    {
-      name: "category",
-      type: "document",
-      title: "Category",
-      fields: [
-        {
-          name: "name",
-          title: "Name",
-          type: "string",
-        },
-      ],
-    },
-    {
-      name: "listing",
-      type: "document",
-      title: "Listing",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "content",
-          title: "Content",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-        {
-          name: "excerpt",
-          title: "Excerpt",
-          type: "string",
-        },
-        {
-          name: "coverImage",
-          title: "Cover Image",
-          type: "image",
-        },
-        {
-          name: "category",
-          title: "Category",
-          type: "reference",
-          to: [{ type: "category" }],
-        },
-        {
-          name: "slug",
-          title: "Slug",
-          type: "slug",
-          options: {
-            source: "title",
-          },
-        },
-      ],
-    },
-    {
-      name: "author",
-      type: "document",
-      title: "Author",
-      fields: [
-        {
-          name: "name",
-          title: "Name",
-          type: "string",
-        },
-        {
-          name: "picture",
-          title: "Picture",
-          type: "image",
-        },
-      ],
-    },
-    {
-      name: "post",
-      type: "document",
-      title: "Post",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "content",
-          title: "Content",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-        {
-          name: "excerpt",
-          title: "Excerpt",
-          type: "string",
-        },
-        {
-          name: "coverImage",
-          title: "Cover Image",
-          type: "image",
-        },
-        {
-          name: "date",
-          title: "Date",
-          type: "datetime",
-        },
-        {
-          name: "author",
-          title: "Author",
-          type: "reference",
-          to: [{ type: "author" }],
-        },
-        {
-          name: "slug",
-          title: "Slug",
-          type: "slug",
-          options: {
-            source: "title",
-          },
-        },
-      ],
-    },
-  ]),
+  types: schemaTypes // Built-in types
+    // Our custom types
+    .concat([author, category, listing, post, categoryReference]),
 });

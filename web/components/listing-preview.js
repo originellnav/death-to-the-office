@@ -1,10 +1,18 @@
 import CoverImageListing from "./cover-image-listing";
 import Link from "next/link";
 
-export default function ListingPreview({ title, coverImage, slug }) {
+export default function ListingPreview({
+  title,
+  coverImage,
+  slug,
+  categories,
+}) {
   return (
     <div>
       <div className="mb-5">
+        {categories.map((category, index) => (
+          <div>{category}</div>
+        ))}
         <CoverImageListing slug={slug} title={title} url={coverImage} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
