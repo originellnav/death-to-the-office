@@ -6,10 +6,9 @@ export default function MoreListings({ listings }) {
       <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
         More Listings
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-32">
         {listings.map((listing) => (
           <div>
-            {console.log(listing)}
             <ListingPreview
               key={listing.slug}
               title={listing.title}

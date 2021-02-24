@@ -129,7 +129,7 @@ export async function getListingAndMorelistings(slug, preview) {
   const [listing, morelistings] = await Promise.all([
     curClient
       .fetch(
-        `*[_type == "listing" && slug.current == $slug] | order(title desc) {
+        `*[_type == "listing" && slug.current == $slug] | order(title asc) {
         ${listingFields}
         content,
       }`,
@@ -137,7 +137,7 @@ export async function getListingAndMorelistings(slug, preview) {
       )
       .then((res) => res?.[0]),
     curClient.fetch(
-      `*[_type == "listing" && slug.current != $slug] | order(title desc){
+      `*[_type == "listing" && slug.current != $slug] | order(title asc){
         ${listingFields}
         content,
       }[0...2]`,
