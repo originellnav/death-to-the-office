@@ -100,7 +100,7 @@ const getClientListings = (preview) => (preview ? previewClient : client);
 
 export async function getPreviewlistingBySlug(slug) {
   const data = await getClientListings(true).fetch(
-    `*[_type == "listing" && slug.current == $slug] | order(title desc){
+    `*[_type == "listing" && slug.current == $slug] | order(title asc){
       ${listingFields}
       content
     }`,
@@ -118,7 +118,7 @@ export async function getAllListingsWithSlug() {
 
 export async function getAllListingsForHome(preview) {
   const results = await getClientListings(preview)
-    .fetch(`*[_type == "listing"] | order(title desc){
+    .fetch(`*[_type == "listing"] | order(title asc){
       ${listingFields}
     }`);
   return getUniqueListings(results);
