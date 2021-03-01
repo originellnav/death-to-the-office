@@ -1,0 +1,73 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#listings > #listing {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 0 2rem;
+}
+#listings > #listing {
+  border-right: none;
+}
+
+@media (min-width: 640px) {
+  #listings > #listing {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: none;
+  }
+  #listings > #listing:nth-child(4n) {
+    border-right: none;
+  }
+}
+@font-face {
+  font-family: "Plain";
+  src: url("PlainMedium-Regular.woff2") format("woff2"),
+    url("PlainMedium-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plain";
+  src: url("PlainRegular-Regular.woff2") format("woff2"),
+    url("PlainRegular-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agrandir Grand";
+  src: url("Agrandir-GrandHeavy.woff2") format("woff2"),
+    url("Agrandir-GrandHeavy.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Times LT Std";
+  src: url("TimesLTStd-Italic.woff2") format("woff2"),
+    url("TimesLTStd-Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}

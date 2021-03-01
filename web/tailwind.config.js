@@ -1,9 +1,9 @@
 module.exports = {
   theme: {
     fontFamily: {
-      heading: ["Agrandir Grand Heavy", "Arial", "sans-serif"],
+      heading: ["Agrandir Grand", "sans-serif"],
       body: ["Plain", "sans-serif"],
-      serif: ["Times Now", "serif"],
+      serif: ["Times LT Std", "sans-serif"],
     },
     extend: {
       container: {
