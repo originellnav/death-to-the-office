@@ -25,7 +25,7 @@ export default function Header() {
               <a>Stories</a>
             </Link>
           </li>
-          <li className="text-base font-bold mr-3">
+          <li className="text-base font-bold">
             <Link href="/about">
               <a>About</a>
             </Link>

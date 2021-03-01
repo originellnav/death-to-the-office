@@ -16,22 +16,11 @@ export default function Index({ allListings, preview }) {
   return (
     <>
       <Layout preview={preview}>
-        {console.log(allListings)}
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
         <Container>
-          <Intro />
-          {/* {heroListing && (
-            <HeroListing
-              title={heroListing.title}
-              coverImage={heroListing.coverImage}
-              date={heroListing.date}
-              author={heroListing.author}
-              slug={heroListing.slug}
-              excerpt={heroListing.excerpt}
-            />
-          )} */}
+          {/* <Intro /> */}
           {moreListings.length > 0 && <MoreListings listings={moreListings} />}
         </Container>
       </Layout>
