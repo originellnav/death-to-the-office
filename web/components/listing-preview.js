@@ -25,7 +25,7 @@ export default function ListingPreview({
         </h3>
         <p className="m-0 text-lg font-serif italic leading-tight">
           <Link as={`/listings/${slug}`} href="/listings/[slug]">
-            {excerpt}
+            <a>{excerpt}</a>
           </Link>
         </p>
         {/* {categories.map((category, index) => (
