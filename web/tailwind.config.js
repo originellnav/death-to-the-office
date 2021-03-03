@@ -1,5 +1,10 @@
 module.exports = {
   theme: {
+    colors: {
+      grey: "#F5F5F5",
+      black: "black",
+      white: "white",
+    },
     fontFamily: {
       heading: ["Agrandir Grand", "sans-serif"],
       body: ["Plain", "sans-serif"],

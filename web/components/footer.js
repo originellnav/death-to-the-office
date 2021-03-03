@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-black bg-opacity-5">
       <div className="container mx-auto py-10 md:py-12 px-4 md:px-6 grid grid-cols-4">
-        <nav className="flex flex-col col-span-4 md:col-span-1 pb-6 md:pb-0 mb-8 md:mb-0 border-b md:border-b-0 md:border-r border-solid text-center md:text-left">
+        <nav className="flex flex-col col-span-4 md:col-span-1 pb-6 md:pb-0 mb-8 md:mb-0 mr-4 border-b md:border-b-0 md:border-r border-solid border-black text-center md:text-left">
           <h3 className="text-xl md:text-2xl font-bold mb-3">Quick links.</h3>
           <ul className="flex flex-col list-style-none">
             <li className="mb-3 text-black text-opacity-50">
@@ -45,7 +45,7 @@ export default function Footer() {
                 </svg>
               </a>
             </li>
-            <li style={{ marginTop: "0.5px" }}>
+            <li>
               <a href="https://twitter.com/">
                 <svg
                   width="16"

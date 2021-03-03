@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="container mx-auto p-6 flex sm:flex-col md:flex-row flex-wrap items-center sm:items-start md:justify-between">
+    <header className="container mx-auto mb-6 p-6 flex sm:flex-col md:flex-row flex-wrap items-center sm:items-start md:justify-between">
       <Link href="/" className="flex items-center">
         <a>
           <Logo />

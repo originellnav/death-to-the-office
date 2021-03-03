@@ -37,17 +37,17 @@ export async function getPreviewPostBySlug(slug) {
   return data[0];
 }
 
-export async function getAllPostsWithSlug() {
-  const data = await client.fetch(`*[_type == "post"]{ 'slug': slug.current }`);
-  return data;
-}
-
 export async function getAllPostsForHome(preview) {
   const results = await getClientPosts(preview)
     .fetch(`*[_type == "post"] | order(date desc, _updatedAt desc){
       ${postFields}
     }`);
   return getUniquePosts(results);
+}
+
+export async function getAllPostsWithSlug() {
+  const data = await client.fetch(`*[_type == "post"]{ 'slug': slug.current }`);
+  return data;
 }
 
 export async function getPostAndMorePosts(slug, preview) {
@@ -109,6 +109,14 @@ export async function getPreviewlistingBySlug(slug) {
   return data[0];
 }
 
+export async function getAllListingsForHome(preview) {
+  const results = await getClientListings(preview)
+    .fetch(`*[_type == "listing"] | order(title asc){
+      ${listingFields}
+    }`);
+  return getUniqueListings(results);
+}
+
 export async function getAllListingsWithSlug() {
   const data = await client.fetch(
     `*[_type == "listing"]{ 'slug': slug.current }`
@@ -116,12 +124,26 @@ export async function getAllListingsWithSlug() {
   return data;
 }
 
-export async function getAllListingsForHome(preview) {
+export async function getAllListingsWithCategorySlug() {
+  const data = await client.fetch(
+    `*[_type == "category"]{ 'slug': slug.current }`
+  );
+  return data;
+}
+
+export async function getAllListingsWithCategory(preview) {
   const results = await getClientListings(preview)
     .fetch(`*[_type == "listing"] | order(title asc){
       ${listingFields}
     }`);
   return getUniqueListings(results);
+}
+
+export async function getAllCategories() {
+  const data = await client.fetch(
+    `*[_type == "category"]{ 'name': name, 'slug' : slug.current }`
+  );
+  return data;
 }
 
 export async function getListingAndMorelistings(slug, preview) {
