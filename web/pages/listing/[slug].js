@@ -31,7 +31,8 @@ export default function Listing({ listing, moreListings, preview }) {
             <article>
               <Head>
                 <title>
-                  {listing.title} | Next.js Blog Example with {CMS_NAME}
+                  {listing.title} | Escape the city. Work from anywhere.{" "}
+                  {CMS_NAME}
                 </title>
                 {/* <meta property="og:image" content={listing.ogImage.url} /> */}
               </Head>

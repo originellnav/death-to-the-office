@@ -14,7 +14,7 @@ export default function Categories({ categories }) {
             >
               <a
                 style={{ margin: "2px" }}
-                className="text-sm inline-flex bg-black rounded-full text-white px-4 py-1"
+                className="transition duration-200 ease text-sm inline-flex bg-black bg-opacity-5 hover:bg-primary hover:text-white rounded-full text-black text-opacity-50 font-medium px-4 py-1"
               >
                 {category.name}
               </a>

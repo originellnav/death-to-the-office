@@ -12,9 +12,13 @@ export default function Index({ allListings, allCategories, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{CMS_NAME} - Escape the city. Work from anywhere.</title>
         </Head>
-        <Intro />
+        <Intro
+          heading="Escape the city. Work from anywhere."
+          text="Select your top values to find rural and coastal communities to live
+          and invest in."
+        />
         <Categories categories={allCategories} />
         {allListings.length > 0 && <MoreListings listings={allListings} />}
       </Layout>
