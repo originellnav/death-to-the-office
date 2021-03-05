@@ -28,7 +28,7 @@ export default function Listing({ listing, moreListings, preview }) {
           <ListingTitle>Loading…</ListingTitle>
         ) : (
           <>
-            <article>
+            <article className="mb-48">
               <Head>
                 <title>
                   {listing.title} | Escape the city. Work from anywhere.{" "}
@@ -41,12 +41,10 @@ export default function Listing({ listing, moreListings, preview }) {
                 coverImage={listing.coverImage}
                 date={listing.date}
                 author={listing.author}
+                excerpt={listing.excerpt}
               />
               <ListingBody content={listing.content} />
             </article>
-            <SectionSeparator />
-            {console.log(moreListings)}
-            {/* {moreListings.length > 0 && <MoreListings listing={moreListings} />} */}
           </>
         )}
       </Container>
