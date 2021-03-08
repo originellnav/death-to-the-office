@@ -19,6 +19,10 @@ html {
   box-sizing: inherit;
 }
 
+#listing {
+  box-sizing: border-box;
+}
+
 #listings > #listing {
   padding: 0 2rem;
 }
