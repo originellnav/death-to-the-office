@@ -11,9 +11,17 @@ import post from "./documents/post";
 
 import categoryReference from "./objects/categoryReference";
 
+import about from "./documents/about";
+
 export default createSchema({
   name: "default",
-  types: schemaTypes // Built-in types
-    // Our custom types
-    .concat([author, category, listing, post, categoryReference]),
+  types: schemaTypes.concat([
+    // Make sure you include the type in this array:
+    author,
+    category,
+    listing,
+    post,
+    categoryReference,
+    about
+  ])
 });

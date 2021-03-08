@@ -168,3 +168,15 @@ export async function getListingAndMorelistings(slug, preview) {
   ]);
   return { listing, morelistings: getUniqueListings(morelistings) };
 }
+
+export async function getAboutContent() {
+  const data = await client.fetch(`*[_type == "about"]{
+    name,
+    email,
+    phone,
+    'picture': picture.asset->url,
+    info,
+    mission,
+}`);
+  return data;
+}
