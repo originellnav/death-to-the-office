@@ -124,6 +124,8 @@ export async function getAllListingsWithSlug() {
   return data;
 }
 
+// Get all Categories
+
 export async function getAllListingsWithCategorySlug() {
   const data = await client.fetch(
     `*[_type == "category"]{ 'slug': slug.current }`

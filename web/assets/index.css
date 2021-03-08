@@ -44,6 +44,15 @@ p {
 
 @font-face {
   font-family: "Plain";
+  src: url("PlainBold-Regular.woff2") format("woff2"),
+    url("PlainBold-Regular.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plain";
   src: url("PlainMedium-Regular.woff2") format("woff2"),
     url("PlainMedium-Regular.woff") format("woff");
   font-weight: 500;

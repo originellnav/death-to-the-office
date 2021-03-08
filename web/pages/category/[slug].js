@@ -1,20 +1,16 @@
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
-import Container from "../../components/container";
-import ListingBody from "../../components/listing-body";
-import MoreListings from "../../components/more-listings";
-import Header from "../../components/header";
-import Intro from "../../components/intro";
 import CategoriesNav from "../../components/categories";
-import ListingHeader from "../../components/listing-header";
-import SectionSeparator from "../../components/section-separator";
+import Intro from "../../components/intro";
 import Layout from "../../components/layout";
+import MoreListings from "../../components/more-listings";
+
+import Head from "next/head";
+import { useRouter } from "next/router";
+
 import {
   getAllCategories,
   getAllListingsWithCategory,
   getAllListingsWithCategorySlug,
 } from "../../lib/api";
-import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 
 export default function Categories({
@@ -48,7 +44,9 @@ export default function Categories({
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{CMS_NAME} - Escape the city. Work from anywhere.</title>
+        <title>
+          {formattedSlug} - {CMS_NAME}
+        </title>
       </Head>
       <Intro
         heading={`Showing ${filteredItems.length} locations tagged ${formattedSlug}`}

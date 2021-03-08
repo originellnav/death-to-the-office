@@ -1,15 +1,17 @@
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import Container from "../../components/container";
+import Layout from "../../components/layout";
 import ListingBody from "../../components/listing-body";
 import ListingHeader from "../../components/listing-header";
-import Layout from "../../components/layout";
+import ListingTitle from "../../components/listing-title";
+
+import Head from "next/head";
+import ErrorPage from "next/error";
+import { useRouter } from "next/router";
+
 import {
   getAllListingsWithSlug,
   getListingAndMorelistings,
 } from "../../lib/api";
-import ListingTitle from "../../components/listing-title";
-import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 
 export default function Listing({ listing, preview }) {
@@ -17,6 +19,7 @@ export default function Listing({ listing, preview }) {
   if (!router.isFallback && !listing?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout preview={preview}>
       <Container>
@@ -27,8 +30,7 @@ export default function Listing({ listing, preview }) {
             <article className="mb-24 md:mb-32">
               <Head>
                 <title>
-                  {listing.title} | Escape the city. Work from anywhere.
-                  {CMS_NAME}
+                  {listing.title} - {CMS_NAME}
                 </title>
                 {/* <meta property="og:image" content={listing.ogImage.url} /> */}
               </Head>

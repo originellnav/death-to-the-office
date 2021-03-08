@@ -1,10 +1,12 @@
 import Container from "../components/container";
-import MorePosts from "../components/more-posts";
-import HeroPost from "../components/hero-post";
 import Layout from "../components/layout";
+import HeroPost from "../components/hero-post";
+import MorePosts from "../components/more-posts";
+
 import { getAllPostsForHome } from "../lib/api";
-import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
+
+import Head from "next/head";
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0];
@@ -14,7 +16,7 @@ export default function Index({ allPosts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{CMS_NAME} - Escape the city. Work from anywhere.</title>
+          <title>Stories - {CMS_NAME}</title>
         </Head>
         <Container>
           {heroPost && (

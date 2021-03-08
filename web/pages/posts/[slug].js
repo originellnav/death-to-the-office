@@ -1,22 +1,22 @@
-import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import MoreStories from "../../components/more-posts";
-import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
-import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
-import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
+import PostBody from "../../components/post-body";
+import PostHeader from "../../components/post-header";
 import PostTitle from "../../components/post-title";
+
 import Head from "next/head";
+import ErrorPage from "next/error";
+import { useRouter } from "next/router";
+
+import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import { CMS_NAME } from "../../lib/constants";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <Layout preview={preview}>
       <Container>
@@ -27,8 +27,7 @@ export default function Post({ post, morePosts, preview }) {
             <article className="mb-24 md:mb-32">
               <Head>
                 <title>
-                  {post.title} | {CMS_NAME} - Escape the city. Work from
-                  anywhere.
+                  {post.title} - {CMS_NAME}
                 </title>
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>

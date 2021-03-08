@@ -14,7 +14,7 @@ export default function Index({ allAbout, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{CMS_NAME} - Escape the city. Work from anywhere.</title>
+          <title>About - {CMS_NAME}</title>
         </Head>
         <Container>
           <div className="grid grid-cols-12">
