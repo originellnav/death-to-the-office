@@ -16,14 +16,6 @@ module.exports = {
       input: "0px 7px 15px rgba(0, 0, 0, 0.04)",
     },
     extend: {
-      container: {
-        screens: {
-          sm: "100%",
-          md: "100%",
-          lg: "100%",
-          xl: "1280px",
-        },
-      },
       boxShadow: {
         small: "0 5px 10px rgba(0, 0, 0, 0.12)",
         medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
@@ -47,4 +39,28 @@ module.exports = {
       rotate: ["hover"],
     },
   },
+  corePlugins: {
+    container: false,
+  },
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        ".container": {
+          maxWidth: "100%",
+          "@screen sm": {
+            maxWidth: "100%",
+          },
+          "@screen md": {
+            maxWidth: "100%",
+          },
+          "@screen lg": {
+            maxWidth: "1280px",
+          },
+          "@screen xl": {
+            maxWidth: "1280px",
+          },
+        },
+      });
+    },
+  ],
 };
