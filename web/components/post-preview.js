@@ -12,9 +12,11 @@ export default function PostPreview({
 }) {
   return (
     <div className="col-span-3 md:col-span-1">
-      <div className="mb-4">
-        <CoverImagePost slug={slug} title={title} url={coverImage} />
-      </div>
+      {coverImage && (
+        <div className="mb-4">
+          <CoverImagePost slug={slug} title={title} url={coverImage} />
+        </div>
+      )}
       {title && (
         <h2 className="text-lg md:text-xl mb-1 font-heading font-bold uppercase leading-tight">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">

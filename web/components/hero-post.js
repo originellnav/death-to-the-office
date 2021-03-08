@@ -1,16 +1,9 @@
-import Avatar from "../components/avatar";
 import Date from "../components/date";
 import CoverImagePost from "../components/cover-image-post";
+
 import Link from "next/link";
 
-export default function HeroPost({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}) {
+export default function HeroPost({ title, coverImage, date, excerpt, slug }) {
   return (
     <section className="grid grid-cols-2 mb-8 md:mb-12">
       <div className="col-span-2 md:col-span-1">

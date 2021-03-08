@@ -1,4 +1,3 @@
-import CoverImageListing from "./cover-image-listing";
 import Link from "next/link";
 
 export default function CategoryPreview({ title, slug }) {

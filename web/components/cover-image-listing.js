@@ -1,5 +1,3 @@
-import cn from "classnames";
-import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
 
 export default function CoverImageListing({ title, url, slug }) {

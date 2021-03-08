@@ -1,4 +1,5 @@
 import CoverImageListing from "./cover-image-listing";
+
 import Link from "next/link";
 
 export default function HeroListing({ title, coverImage, excerpt, slug }) {

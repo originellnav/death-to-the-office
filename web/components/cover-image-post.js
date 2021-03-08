@@ -1,6 +1,6 @@
-import cn from "classnames";
-import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
+
+import Link from "next/link";
 
 export default function CoverImagePost({ title, url, slug }) {
   const image = (

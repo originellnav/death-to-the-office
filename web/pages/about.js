@@ -1,10 +1,13 @@
 import Container from "../components/container";
 import Layout from "../components/layout";
 import markdownStyles from "../components/markdown-styles.module.css";
-import { CMS_NAME } from "../lib/constants";
+
 import { getAboutContent } from "../lib/api";
+import { CMS_NAME } from "../lib/constants";
 import { imageBuilder } from "../lib/sanity";
+
 import Head from "next/head";
+
 import BlockContent from "@sanity/block-content-to-react";
 
 export default function Index({ allAbout, preview }) {
