@@ -25,7 +25,7 @@ export default function Header() {
             </Link>
           </li>
           <li className="text-black hover:text-primary transition duration-200 ease font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
-            <Link href="/blog" aria-label="Stories">
+            <Link href="/stories" aria-label="Stories">
               <a>Stories</a>
             </Link>
           </li>

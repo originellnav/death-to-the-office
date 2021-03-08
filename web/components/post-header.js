@@ -2,25 +2,23 @@ import Avatar from "../components/avatar";
 import Date from "../components/date";
 import CoverImagePost from "./cover-image-post";
 import PostTitle from "../components/post-title";
+import Link from "next/link";
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, coverImage, date, excerpt }) {
   return (
-    <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImagePost title={title} url={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
-        </div>
-        <div className="mb-6 text-lg">
-          <Date dateString={date} />
+    <div className="mb-8 md:mb-16 mx-0 relative">
+      <CoverImagePost title={title} url={coverImage} />
+      <div className="absolute left-0 bottom-0">
+        <div className="bg-white m-3 md:m-4 p-4 md:p-5 rounded">
+          {title && <PostTitle>{title}</PostTitle>}
+          {excerpt && (
+            <p className="font-medium text-opacity-50 text-base md:text-xl text-opacity-50 italic font-serif mb-2">
+              {excerpt}
+            </p>
+          )}
+          {date && <Date dateString={date} />}
         </div>
       </div>
-    </>
+    </div>
   );
 }

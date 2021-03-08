@@ -13,7 +13,6 @@ export default function ListingHeader({
     <>
       <div className="mb-8 md:mb-16 mx-0 relative">
         <CoverImageListing title={title} url={coverImage} />
-        {console.log(categories)}
         <div className="absolute left-0 bottom-0">
           <div className="bg-white m-3 md:m-4 p-4 md:p-5 rounded">
             {title && <ListingTitle>{title}</ListingTitle>}

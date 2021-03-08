@@ -22,7 +22,7 @@ export default function Footer() {
               </Link>
             </li>
             <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
-              <Link href="/blog" aria-label="Stories">
+              <Link href="/stories" aria-label="Stories">
                 <a>Stories</a>
               </Link>
             </li>

@@ -8,24 +8,30 @@ export default function PostPreview({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
 }) {
   return (
-    <div>
-      <div className="mb-5">
+    <div className="col-span-3 md:col-span-1">
+      <div className="mb-4">
         <CoverImagePost slug={slug} title={title} url={coverImage} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
-        </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
-      </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
+      {title && (
+        <h2 className="text-lg md:text-xl mb-1 font-heading font-bold uppercase leading-tight">
+          <Link as={`/posts/${slug}`} href="/posts/[slug]">
+            <a>{title}</a>
+          </Link>
+        </h2>
+      )}
+      {excerpt && (
+        <p className="m-0 text-lg font-serif italic leading-tight mb-3">
+          {excerpt}
+        </p>
+      )}
+      {date && (
+        <div>
+          <Date dateString={date} />
+        </div>
+      )}
     </div>
   );
 }

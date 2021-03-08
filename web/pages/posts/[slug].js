@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
-import MoreStories from "../../components/more-stories";
+import MoreStories from "../../components/more-posts";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
@@ -20,12 +20,11 @@ export default function Post({ post, morePosts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        {/* <Header /> */}
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article>
+            <article className="mb-24 md:mb-32">
               <Head>
                 <title>
                   {post.title} | {CMS_NAME} - Escape the city. Work from
@@ -36,13 +35,11 @@ export default function Post({ post, morePosts, preview }) {
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
+                excerpt={post.excerpt}
                 date={post.date}
-                author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.content} author={post.author} />
             </article>
-            <SectionSeparator />
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </>
         )}
       </Container>

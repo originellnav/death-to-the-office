@@ -20,15 +20,14 @@ export default function Listing({ listing, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        {/* <Header /> */}
         {router.isFallback ? (
           <ListingTitle>Loading…</ListingTitle>
         ) : (
           <>
-            <article className="mb-48">
+            <article className="mb-24 md:mb-32">
               <Head>
                 <title>
-                  {listing.title} | Escape the city. Work from anywhere.{" "}
+                  {listing.title} | Escape the city. Work from anywhere.
                   {CMS_NAME}
                 </title>
                 {/* <meta property="og:image" content={listing.ogImage.url} /> */}
