@@ -2,10 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import ListingBody from "../../components/listing-body";
-import MoreListings from "../../components/more-listings";
-import Header from "../../components/header";
 import ListingHeader from "../../components/listing-header";
-import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
 import {
   getAllListingsWithSlug,
@@ -15,7 +12,7 @@ import ListingTitle from "../../components/listing-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 
-export default function Listing({ listing, moreListings, preview }) {
+export default function Listing({ listing, preview }) {
   const router = useRouter();
   if (!router.isFallback && !listing?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -39,9 +36,8 @@ export default function Listing({ listing, moreListings, preview }) {
               <ListingHeader
                 title={listing.title}
                 coverImage={listing.coverImage}
-                date={listing.date}
-                author={listing.author}
                 excerpt={listing.excerpt}
+                categories={listing.categories}
               />
               <ListingBody content={listing.content} />
             </article>

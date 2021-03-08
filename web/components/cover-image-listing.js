@@ -5,10 +5,10 @@ import { imageBuilder } from "../lib/sanity";
 export default function CoverImageListing({ title, url, slug }) {
   const image = (
     <img
-      width={720}
-      height={438}
+      width={2000}
+      height={1000}
       alt={`Cover Image for ${title}`}
-      src={imageBuilder.image(url).height(438).width(720).url()}
+      src={imageBuilder.image(url).height(1000).width(2000).url()}
     />
   );
 

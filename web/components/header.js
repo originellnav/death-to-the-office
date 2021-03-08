@@ -18,11 +18,10 @@ export default function Header() {
           <li className="text-black hover:text-primary transition duration-200 ease font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
             <Link
               href="https://deathtotheoffice.substack.com/"
-              target="_blank"
               rel="noopener noreferrer"
-              aria-label="Trend"
+              aria-label="Trends"
             >
-              <a>Trends</a>
+              <a target="_blank">Trends</a>
             </Link>
           </li>
           <li className="text-black hover:text-primary transition duration-200 ease font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">

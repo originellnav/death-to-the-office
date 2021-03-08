@@ -15,11 +15,10 @@ export default function Footer() {
             <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
               <Link
                 href="https://deathtotheoffice.substack.com/"
-                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Trends"
               >
-                <a>Trends</a>
+                <a target="_blank">Trends</a>
               </Link>
             </li>
             <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
