@@ -16,7 +16,7 @@ export default function ListingHeader({
           <div className="bg-white m-3 md:m-4 p-4 md:p-5 rounded">
             {title && <ListingTitle>{title}</ListingTitle>}
             {excerpt && <ListingExcerpt>{excerpt}</ListingExcerpt>}
-            <ul className="flex flex-wrap mt-2 md:mt-4 text-xs md:text-sm font-medium text-black text-opacity-50">
+            <ul className="flex flex-wrap text-xs md:text-sm font-medium text-black text-opacity-50 uppercase">
               {categories.map((category, index) => (
                 <li key={index}>
                   {category}

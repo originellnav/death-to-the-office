@@ -13,7 +13,7 @@ export default function Index({ allListings, allCategories, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Escape the city. Work from anywhere. - {CMS_NAME}</title>
+          <title>Locations - {CMS_NAME}</title>
         </Head>
         <Intro
           heading="Escape the city. Work from anywhere."

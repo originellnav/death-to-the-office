@@ -3,7 +3,7 @@ import PostPreview from "./post-preview";
 export default function MorePosts({ posts }) {
   return (
     <section>
-      <div className="grid grid-cols-3 gap-12 mb-32">
+      <div id="posts" className="flex flex-wrap -mx-8 mb-16">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}

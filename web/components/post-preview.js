@@ -11,7 +11,10 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div className="col-span-3 md:col-span-1">
+    <div
+      id="post"
+      className="w-full md:w-1/3 mb-12 transform transition duration-200 ease-in-out hover:-translate-y-2"
+    >
       {coverImage && (
         <div className="mb-4">
           <CoverImagePost slug={slug} title={title} url={coverImage} />
