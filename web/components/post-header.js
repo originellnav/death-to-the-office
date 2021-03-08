@@ -12,7 +12,7 @@ export default function PostHeader({ title, coverImage, date, excerpt }) {
         <div className="bg-white m-3 md:m-4 p-4 md:p-5 rounded">
           {title && <PostTitle>{title}</PostTitle>}
           {excerpt && (
-            <p className="font-medium text-opacity-50 text-base md:text-xl text-opacity-50 italic font-serif mb-2">
+            <p className="font-body font-medium text-opacity-50 text-base md:text-xl text-opacity-50 italic font-serif mb-2">
               {excerpt}
             </p>
           )}

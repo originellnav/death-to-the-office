@@ -27,7 +27,7 @@ export default function Index({ allAbout, preview }) {
                 className={markdownStyles.markdown}
               />
             </div>
-            <div className="col-span-12 md:col-span-8 mt-6 mb-24 md:mb-0 m-0 md:pl-24 relative self-start">
+            <div className="col-span-12 md:col-span-8 mt-6 mb-24 md:mb-16 md:pl-24 relative self-start">
               <div>
                 <img
                   width={1320}
@@ -41,13 +41,13 @@ export default function Index({ allAbout, preview }) {
                 />
                 <div className="absolute left-0 bottom-0 md:pl-24">
                   <div className="bg-white rounded m-4 p-5 pr-12">
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-lg font-body font-bold mb-2">
                       General Enquiries
                     </h3>
                     {about.email && (
                       <a
                         href={`mailto:${about.email}`}
-                        className="text-black text-opacity-50 hover:text-opacity-60 transition duration-150 ease font-medium block mb-2"
+                        className="font-body text-black text-opacity-50 hover:text-opacity-60 transition duration-150 ease font-medium block mb-2"
                       >
                         {about.email}
                       </a>
@@ -55,7 +55,7 @@ export default function Index({ allAbout, preview }) {
                     {about.phone && (
                       <a
                         href={`tel:${about.phone.replace(/ /g, "")}`}
-                        className="text-black text-opacity-50 hover:text-opacity-60 transition duration-150 ease font-medium block"
+                        className="font-body text-black text-opacity-50 hover:text-opacity-60 transition duration-150 ease font-medium block"
                       >
                         {about.phone}
                       </a>

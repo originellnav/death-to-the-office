@@ -5,7 +5,7 @@ export default function Date({ dateString }) {
   return (
     <time
       dateTime={dateString}
-      className="text-sm text-black text-opacity-50 font-medium uppercase"
+      className="text-sm text-black text-opacity-50 font-body font-medium uppercase"
     >
       {format(date, "LLLL	d, yyyy")}
     </time>

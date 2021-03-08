@@ -10,12 +10,12 @@ export default function Header() {
       </Link>
       <nav className="mt-4 md:mt-0">
         <ul className="flex justify-between">
-          <li className="text-black hover:text-primary transition duration-200 ease font-bold pr-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
+          <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold pr-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
             <Link href="/" aria-label="Locations">
               <a>Locations</a>
             </Link>
           </li>
-          <li className="text-black hover:text-primary transition duration-200 ease font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
+          <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
             <Link
               href="https://deathtotheoffice.substack.com/"
               rel="noopener noreferrer"
@@ -24,12 +24,12 @@ export default function Header() {
               <a target="_blank">Trends</a>
             </Link>
           </li>
-          <li className="text-black hover:text-primary transition duration-200 ease font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
+          <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
             <Link href="/stories" aria-label="Stories">
               <a>Stories</a>
             </Link>
           </li>
-          <li className="text-black hover:text-primary transition duration-200 ease font-bold pl-3 md:pl-4 py-2">
+          <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold pl-3 md:pl-4 py-2">
             <Link href="/about" aria-label="About">
               <a>About</a>
             </Link>

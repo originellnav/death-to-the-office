@@ -5,7 +5,7 @@ export default function Intro({ heading, text, category, center }) {
     <section className="py-6 mb-6 bg-grey">
       <Container>
         {heading && (
-          <h2 className={`text-lg ${center && "text-center"}`}>
+          <h2 className={`font-body text-lg ${center && "text-center"}`}>
             <span className="font-bold">{heading}</span>
 
             <span
@@ -18,7 +18,7 @@ export default function Intro({ heading, text, category, center }) {
         )}
         {text && (
           <p
-            className={`font-medium text-black text-opacity-50 mt-2 leading-snug ${
+            className={`font-body font-medium text-black text-opacity-50 mt-2 leading-snug ${
               center && "text-center"
             }`}
           >

@@ -1,18 +1,18 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-lg leading-relaxed font-body;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply my-4 text-black text-opacity-50 font-medium;
+  @apply my-4 text-black text-opacity-50 font-medium font-body;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-0 mb-0 leading-snug font-bold;
+  @apply text-3xl mt-0 mb-0 leading-snug font-bold font-body;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-0 mb-0 leading-snug font-bold;
+  @apply text-2xl mt-0 mb-0 leading-snug font-bold font-body;
 }

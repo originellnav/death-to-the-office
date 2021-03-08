@@ -5,14 +5,16 @@ export default function Footer() {
     <footer className="bg-grey">
       <div className="container mx-auto py-10 md:py-12 px-6 grid grid-cols-4">
         <nav className="flex flex-col col-span-4 md:col-span-1 pb-6 md:pb-0 mb-8 md:mb-0 mr-4 border-b md:border-b-0 md:border-r border-solid border-border text-center md:text-left">
-          <h3 className="text-xl md:text-2xl font-bold mb-3">Quick links.</h3>
+          <h3 className="text-xl md:text-2xl font-bold font-body mb-3">
+            Quick links.
+          </h3>
           <ul className="flex flex-col list-style-none">
-            <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
+            <li className="font-body mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
               <Link href="/" aria-label="Locations">
                 <a>Locations</a>
               </Link>
             </li>
-            <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
+            <li className="font-body mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
               <Link
                 href="https://deathtotheoffice.substack.com/"
                 rel="noopener noreferrer"
@@ -21,12 +23,12 @@ export default function Footer() {
                 <a target="_blank">Trends</a>
               </Link>
             </li>
-            <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
+            <li className="font-body mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
               <Link href="/stories" aria-label="Stories">
                 <a>Stories</a>
               </Link>
             </li>
-            <li className="mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
+            <li className="font-body mb-3 text-black text-opacity-40 hover:text-opacity-60 transition duration-150 ease font-medium">
               <Link href="/about" aria-label="Abourt">
                 <a>About</a>
               </Link>
@@ -80,16 +82,16 @@ export default function Footer() {
           </ul>
         </nav>
         <div className="flex flex-col justify-center items-center text-center col-span-4 md:col-span-3 w-full py-12 md:pt-0 md:pb-0">
-          <h4 className="text-xl md:text-2xl font-bold mb-4">
+          <h4 className="font-body text-xl md:text-2xl font-bold mb-4">
             Sign up to our newsletter.
           </h4>
-          <div className="w-full md:w-1/2 flex justify-between items-center bg-white pl-3 rounded-full shadow-input">
+          <div className="w-full md:w-1/2 flex justify-between items-center bg-white pl-3 rounded-full shadow-input border-4 border-white">
             <input
-              className="bg-white text-black text-opacity-50 py-2 px-3 md:py-3 rounded-tl-full rounded-bl-full focus:outline-none"
+              className="font-body bg-white text-black text-opacity-50 py-2 px-3 md:py-3 rounded-tl-full rounded-bl-full focus:outline-none"
               placeholder="Your email address"
             ></input>
             <button
-              className="bg-black hover:bg-primary font-medium transition duration-200 ease focus:outline-none text-white py-2 md:py-0 px-5 inline-flex items-center h-full border-4 border-white rounded-full"
+              className="font-body bg-black hover:bg-primary font-medium transition duration-200 ease focus:outline-none text-white py-2 md:py-0 px-5 m-0 inline-flex items-center h-full rounded-full"
               type="submit"
             >
               Submit

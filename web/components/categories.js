@@ -15,7 +15,7 @@ export default function Categories({ categories }) {
           <Link href="/">
             <a
               style={{ margin: "2px" }}
-              className={`transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
+              className={`font-body transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
                 currentSlug === undefined
                   ? "bg-primary text-white "
                   : "bg-black bg-opacity-5 text-black text-opacity-50 "
@@ -32,7 +32,7 @@ export default function Categories({ categories }) {
             >
               <a
                 style={{ margin: "2px" }}
-                className={`transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
+                className={`font-body transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
                   currentSlug === category.slug
                     ? "bg-primary text-white "
                     : "bg-black bg-opacity-5 text-black text-opacity-50 "
