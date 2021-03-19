@@ -49,7 +49,7 @@ export default function Categories({
         </title>
       </Head>
       <Intro
-        heading={`Showing ${filteredItems.length} locations tagged`}
+        subheading={`Showing ${filteredItems.length} locations tagged`}
         category={formattedSlug}
         center={true}
       />

@@ -1,12 +1,17 @@
 import Container from "../components/container";
 
-export default function Intro({ heading, text, category, center }) {
+export default function Intro({ heading, subheading, text, category, center }) {
   return (
-    <section className="py-6 mb-6 bg-grey">
+    <section className="py-6 mb-6 text-center bg-grey">
       <Container>
         {heading && (
-          <h2 className={`font-body text-lg ${center && "text-center"}`}>
+          <h2 className={`font-body text-2xl ${center && "text-center"}`}>
             <span className="font-bold">{heading}</span>
+          </h2>
+        )}
+        {subheading && (
+          <h2 className={`font-body text-lg ${center && "text-center"}`}>
+            <span className="font-bold">{subheading}</span>
 
             <span
               className="font-serif text-xl pl-2 uppercase"

@@ -24,6 +24,16 @@ export default {
       type: "string",
     },
     {
+      name: "instagram",
+      title: "Instagram URL",
+      type: "string",
+    },
+    {
+      name: "twitter",
+      title: "Twitter URL",
+      type: "string",
+    },
+    {
       name: "picture",
       title: "Picture",
       type: "image",
