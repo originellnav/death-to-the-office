@@ -19,6 +19,11 @@ export default {
       type: "string",
     },
     {
+      name: "newsletter",
+      title: "Newsletter Text",
+      type: "string",
+    },
+    {
       name: "picture",
       title: "Picture",
       type: "image",

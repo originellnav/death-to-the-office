@@ -9,7 +9,12 @@ export default () =>
       S.documentListItem()
         .schemaType("about")
         .title("About")
-        .child(S.document().schemaType("about").documentId("about")),
+        .child(
+          S.document()
+            .schemaType("about")
+            .documentId("about")
+            .views([S.view.form()])
+        ),
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above

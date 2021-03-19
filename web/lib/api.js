@@ -176,6 +176,7 @@ export async function getAboutContent() {
     name,
     email,
     phone,
+    newsletter,
     'picture': picture.asset->url,
     info,
     mission,
