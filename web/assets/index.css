@@ -32,6 +32,39 @@ html {
   border-right: none;
 }
 
+.mailchimp-form input {
+  padding: 0.75rem;
+  outline: none;
+  color: black;
+  border-radius: 9999px;
+}
+
+.mailchimp-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  outline: none;
+  background-color: black;
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-family: "Plain", sans-serif;
+  padding: 0.75rem 1.3rem;
+  transition: all 200ms ease;
+}
+
+.mailchimp-form button:hover {
+  background-color: #3e80fe;
+}
+
+.msg-alert {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -32px;
+}
+
 p {
   font-size: 1rem;
 }

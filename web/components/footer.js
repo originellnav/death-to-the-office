@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Newsletter from "./newsletter";
 
 export default function Footer() {
   return (
@@ -81,23 +82,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <div className="flex flex-col justify-center items-center text-center col-span-4 md:col-span-3 w-full py-12 md:pt-0 md:pb-0">
-          <h4 className="font-body text-xl md:text-2xl font-bold mb-4">
-            Sign up to our newsletter.
-          </h4>
-          <div className="w-full md:w-1/2 flex justify-between items-center bg-white pl-3 rounded-full shadow-input border-4 border-white">
-            <input
-              className="font-body bg-white text-black text-opacity-50 py-2 px-3 md:py-3 rounded-tl-full rounded-bl-full focus:outline-none"
-              placeholder="Your email address"
-            ></input>
-            <button
-              className="font-body bg-black hover:bg-primary font-medium transition duration-200 ease focus:outline-none text-white py-2 md:py-0 px-5 m-0 inline-flex items-center h-full rounded-full"
-              type="submit"
-            >
-              Submit
-            </button>
-          </div>
-        </div>
+        <Newsletter />
       </div>
     </footer>
   );
