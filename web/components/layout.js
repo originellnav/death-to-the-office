@@ -3,15 +3,21 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Meta from "../components/meta";
 
-export default function Layout({ preview, children }) {
+export default function Layout({
+  preview,
+  children,
+  header,
+  footer,
+  className,
+}) {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div className={`min-h-screen ${className}`}>
         <Alert preview={preview} />
-        <Header />
+        {header && header === "hide" ? null : <Header />}
         <main>{children}</main>
-        <Footer />
+        {footer && footer === "hide" ? null : <Footer />}
       </div>
     </>
   );

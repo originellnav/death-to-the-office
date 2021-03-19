@@ -8,7 +8,7 @@ export const DataContext = React.createContext({});
 function MyApp({ Component, pageProps, aboutContent }) {
   return (
     <DataContext.Provider value={{ aboutContent }}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </DataContext.Provider>
   );
 }

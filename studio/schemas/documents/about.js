@@ -24,6 +24,16 @@ export default {
       type: "string",
     },
     {
+      name: "trendsHeader",
+      title: "Trends Header",
+      type: "text",
+    },
+    {
+      name: "trendsText",
+      title: "Trends Text",
+      type: "text",
+    },
+    {
       name: "instagram",
       title: "Instagram URL",
       type: "string",
