@@ -12,7 +12,9 @@ export default function HeroListing({ title, coverImage, excerpt, slug }) {
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link as={`/listing/${slug}`} href="/listing/[slug]">
-              <a className="hover:underline">{title}</a>
+              <a aria-label={title} className="hover:underline">
+                {title}
+              </a>
             </Link>
           </h3>
         </div>

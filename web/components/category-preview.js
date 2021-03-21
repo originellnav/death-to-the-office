@@ -7,7 +7,9 @@ export default function CategoryPreview({ title, slug }) {
     <div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link as={`/category/${slugLink}`} href="/category/[slugLink]">
-          <a className="hover:underline">{title}</a>
+          <a aria-label={title} className="hover:underline">
+            {title}
+          </a>
         </Link>
       </h3>
     </div>

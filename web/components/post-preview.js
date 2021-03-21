@@ -23,7 +23,7 @@ export default function PostPreview({
       {title && (
         <h2 className="text-lg md:text-xl mb-1 font-heading font-bold uppercase leading-tight">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a>{title}</a>
+            <a aria-label={title}>{title}</a>
           </Link>
         </h2>
       )}

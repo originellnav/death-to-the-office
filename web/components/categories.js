@@ -11,9 +11,10 @@ export default function Categories({ categories }) {
   return (
     <section>
       <Container>
-        <div className="flex flex-wrap justify-center w-full md:w-full mx-auto">
+        <div className="flex flex-wrap justify-center w-full md:w-3/4 mx-auto">
           <Link href="/">
             <a
+              aria-label="All Categories"
               style={{ margin: "2px" }}
               className={`font-body transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
                 currentSlug === undefined
@@ -31,6 +32,7 @@ export default function Categories({ categories }) {
               href="/category/[category.slug]"
             >
               <a
+                aria-label={category.name}
                 style={{ margin: "2px" }}
                 className={`font-body transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
                   currentSlug === category.slug

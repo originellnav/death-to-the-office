@@ -7,7 +7,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 import Trends from "../components/trends";
-import Container from "../components/container";
 
 export default function Index({ preview }) {
   return (
@@ -21,10 +20,10 @@ export default function Index({ preview }) {
         <Head>
           <title>Trends - {CMS_NAME}</title>
         </Head>
-        <div class="container mx-auto flex flex-col justify-center h-screen relative px-6 overflow-hidden">
+        <div className="container mx-auto flex flex-col justify-center h-screen relative px-6 overflow-hidden">
           <nav className="absolute top-0 left-0 py-12 px-6">
             <Link href="/">
-              <a>
+              <a aria-label="Home">
                 <Logo />
               </a>
             </Link>

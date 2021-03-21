@@ -12,7 +12,7 @@ export default function HeroPost({ title, coverImage, date, excerpt, slug }) {
       <div className="col-span-2 md:col-span-1 flex flex-col justify-center md:px-12">
         <h3 className="text-lg md:text-3xl mt-4 md:mt-0 mb-1 font-heading font-bold uppercase leading-tight">
           <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a>{title}</a>
+            <a aria-label={title}>{title}</a>
           </Link>
         </h3>
         {excerpt && (

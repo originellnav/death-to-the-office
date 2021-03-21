@@ -9,7 +9,7 @@ export default function ListingPreview({ title, coverImage, slug, excerpt }) {
       className="w-full sm:w-2/4 md:w-1/4 mb-12 transform transition duration-200 ease-in-out hover:-translate-y-2"
     >
       <Link as={`/listing/${slug}`} href="/listing/[slug]" className="mb-5">
-        <a>
+        <a aria-label={title}>
           {coverImage && (
             <img
               width={720}

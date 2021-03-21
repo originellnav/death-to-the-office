@@ -4,30 +4,32 @@ export default function Header() {
   return (
     <header className="container mx-auto mb-6 p-6 flex sm:flex-col md:flex-row flex-wrap items-center sm:items-start md:items-center md:justify-between">
       <Link href="/" className="flex items-center">
-        <a>
+        <a aria-label="Home">
           <Logo />
         </a>
       </Link>
       <nav className="mt-4 md:mt-0">
         <ul className="flex justify-between">
           <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold pr-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
-            <Link href="/" aria-label="Locations">
-              <a>Locations</a>
+            <Link href="/">
+              <a aria-label="Locations">Locations</a>
             </Link>
           </li>
           <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
-            <Link href="/trends" rel="noopener noreferrer" aria-label="Trends">
-              <a>Trends</a>
+            <Link href="/trends">
+              <a aria-label="Trends" rel="noopener noreferrer">
+                Trends
+              </a>
             </Link>
           </li>
           <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold px-3 md:px-4 py-2 inline-flex items-center border-r border-solid border-border">
-            <Link href="/stories" aria-label="Stories">
-              <a>Stories</a>
+            <Link href="/stories">
+              <a aria-label="Stories">Stories</a>
             </Link>
           </li>
           <li className="text-black hover:text-primary transition duration-200 ease font-body font-bold pl-3 md:pl-4 py-2">
-            <Link href="/about" aria-label="About">
-              <a>About</a>
+            <Link href="/about">
+              <a aria-label="About">About</a>
             </Link>
           </li>
         </ul>
