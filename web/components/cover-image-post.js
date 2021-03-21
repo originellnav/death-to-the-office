@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function CoverImagePost({ title, url, slug }) {
   const image = (
     <img
-      width={2000}
-      height={1000}
+      width={1280}
+      height={640}
       alt={`Cover Image for ${title}`}
-      src={imageBuilder.image(url).height(1000).width(2000).url()}
+      src={imageBuilder.image(url).height(640).width(1280).url()}
     />
   );
 

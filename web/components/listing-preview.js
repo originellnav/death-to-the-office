@@ -12,10 +12,10 @@ export default function ListingPreview({ title, coverImage, slug, excerpt }) {
         <a aria-label={title}>
           {coverImage && (
             <img
-              width={720}
-              height={400}
+              width={640}
+              height={380}
               alt={`Cover Image for ${title}`}
-              src={imageBuilder.image(coverImage).height(400).width(720).url()}
+              src={imageBuilder.image(coverImage).height(380).width(640).url()}
             />
           )}
           {title && (
