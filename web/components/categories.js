@@ -37,7 +37,7 @@ export default function Categories({ categories }) {
                 className={`font-body transition duration-200 ease text-sm inline-flex hover:bg-primary hover:text-white rounded-full font-medium px-4 py-1 ${
                   currentSlug === category.slug
                     ? "bg-primary text-white "
-                    : "bg-black bg-opacity-5 text-black text-opacity-50 "
+                    : "bg-black bg-opacity-5 text-black text-opacity-50"
                 }`}
               >
                 {category.name}
