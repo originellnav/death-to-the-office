@@ -35,11 +35,14 @@ export default function Categories({
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 
-  const currentSlugName = allCategories.find((c) => c.slug === currentSlug);
+  const currentSlugName =
+    allCategories && allCategories.find((c) => c.slug === currentSlug);
 
-  const filteredItems = allListingsWithCategory.filter(
-    (i) => i.categories && i.categories.includes(currentSlugName.name)
-  );
+  const filteredItems =
+    allListingsWithCategory &&
+    allListingsWithCategory.filter(
+      (i) => i.categories && i.categories.includes(currentSlugName.name)
+    );
 
   return (
     <Layout preview={preview}>

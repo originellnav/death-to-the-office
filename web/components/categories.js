@@ -11,7 +11,7 @@ export default function Categories({ categories }) {
   return (
     <section>
       <Container>
-        <div className="flex flex-wrap justify-center w-full px-0 md:px-16 mx-auto">
+        <div className="flex flex-wrap justify-center px-0 md:px-16 mx-auto">
           <Link href="/">
             <a
               aria-label="All Categories"

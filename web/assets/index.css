@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: "Plain", sans-serif;
-  box-sizing: border-box;
-}
-
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,6 +11,21 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+html {
+  font-family: "Plain", sans-serif;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
 }
 
 #listing,
@@ -30,49 +40,6 @@ html {
 #listings > #listing,
 #posts > #post {
   border-right: none;
-}
-
-.mailchimp-form > input {
-  outline: none;
-  padding: 0 0.3rem;
-  color: black;
-  border-radius: 9999px;
-  width: 100%;
-  height: 100%;
-  font-family: "Plain", sans-serif;
-}
-.mailchimp-form > input:focus {
-  outline: none;
-}
-
-.mailchimp-form > button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem;
-  outline: none;
-  background-color: black;
-  color: white;
-  border-radius: 9999px;
-  font-weight: 500;
-  font-family: "Plain", sans-serif;
-  padding: 0.75rem 1.3rem;
-  transition: all 200ms ease;
-}
-
-.mailchimp-form > button:hover {
-  background-color: #3e80fe;
-}
-
-.msg-alert {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -32px;
-}
-
-p {
-  font-size: 1rem;
 }
 
 @media (min-width: 640px) {

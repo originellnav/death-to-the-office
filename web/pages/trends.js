@@ -43,7 +43,7 @@ export async function getStaticProps({ preview = false }) {
 }
 
 const Logo = () => (
-  <div style={{ width: "320px" }}>
+  <div style={{ width: "340px" }}>
     <svg
       width="100%"
       height="100%"
