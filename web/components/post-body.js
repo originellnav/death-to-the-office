@@ -4,7 +4,7 @@ import Avatar from "../components/avatar";
 
 export default function PostBody({ content, author }) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto block-content">
       {content && (
         <BlockContent blocks={content} className={markdownStyles.markdown} />
       )}

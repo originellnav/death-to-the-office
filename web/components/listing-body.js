@@ -4,7 +4,7 @@ import BlockContent from "@sanity/block-content-to-react";
 
 export default function ListingBody({ content }) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto block-content">
       {content && (
         <BlockContent blocks={content} className={markdownStyles.markdown} />
       )}

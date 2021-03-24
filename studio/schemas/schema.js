@@ -12,6 +12,7 @@ import post from "./documents/post";
 import categoryReference from "./objects/categoryReference";
 
 import about from "./documents/about";
+import portableText from "./objects/portableText";
 
 export default createSchema({
   name: "default",
@@ -22,6 +23,7 @@ export default createSchema({
     listing,
     post,
     categoryReference,
-    about
-  ])
+    about,
+    portableText,
+  ]),
 });
