@@ -23,6 +23,10 @@ ul,
 li {
   font-size: 1rem;
 }
+.block-content a {
+  color: #3e80fe;
+  text-decoration: underline;
+}
 .block-content ol {
   list-style-type: decimal;
   margin-left: 0.8rem;

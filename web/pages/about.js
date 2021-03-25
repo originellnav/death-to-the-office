@@ -10,6 +10,21 @@ import Head from "next/head";
 
 import BlockContent from "@sanity/block-content-to-react";
 
+const serializers = {
+  marks: {
+    link: ({ mark, children }) => {
+      const { blank, href } = mark;
+      return blank ? (
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      ) : (
+        <a href={href}>{children}</a>
+      );
+    },
+  },
+};
+
 export default function Index({ allAbout, preview }) {
   const about = allAbout[0];
 
@@ -21,10 +36,11 @@ export default function Index({ allAbout, preview }) {
         </Head>
         <Container>
           <div className="grid grid-cols-12">
-            <div className="col-span-12 md:col-span-4 md:mb-16">
+            <div className="col-span-12 md:col-span-4 md:mb-16 block-content">
               <BlockContent
                 blocks={about.info}
                 className={markdownStyles.markdown}
+                serializers={serializers}
               />
             </div>
             <div className="col-span-12 md:col-span-8 mt-6 mb-24 md:mb-16 md:pl-24 relative self-start">
@@ -65,10 +81,11 @@ export default function Index({ allAbout, preview }) {
               </div>
             </div>
           </div>
-          <div className="max-w-3xl mx-auto bg-grey pt-12 pb-6 px-12 rounded-md text-center mb-24 md:mb-32">
+          <div className="max-w-3xl mx-auto bg-grey pt-12 pb-6 px-12 rounded-md text-center mb-24 md:mb-32 block-content">
             <BlockContent
               blocks={about.mission}
               className={markdownStyles.markdown}
+              serializers={serializers}
             />
           </div>
         </Container>

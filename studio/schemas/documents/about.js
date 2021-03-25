@@ -51,14 +51,12 @@ export default {
     {
       name: "info",
       title: "Info",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "portableText",
     },
     {
       name: "mission",
       title: "Mission",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "portableText",
     },
   ],
   preview: {
