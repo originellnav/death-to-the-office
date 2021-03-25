@@ -19,8 +19,13 @@ export default {
       type: "string",
     },
     {
-      name: "newsletter",
-      title: "Newsletter Text",
+      name: "homepageHeader",
+      title: "Homepage Header",
+      type: "string",
+    },
+    {
+      name: "homepageSubheader",
+      title: "Homepage Subheader",
       type: "string",
     },
     {
@@ -32,6 +37,11 @@ export default {
       name: "trendsText",
       title: "Trends Text",
       type: "text",
+    },
+    {
+      name: "newsletter",
+      title: "Newsletter Text",
+      type: "string",
     },
     {
       name: "instagram",

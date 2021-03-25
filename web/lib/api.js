@@ -177,6 +177,8 @@ export async function getAboutContent() {
     email,
     phone,
     newsletter,
+    homepageHeader,
+    homepageSubheader,
     trendsHeader,
     trendsText,
     instagram,
