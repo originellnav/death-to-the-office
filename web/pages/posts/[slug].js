@@ -19,17 +19,17 @@ export default function Post({ post, preview }) {
   return (
     <Layout
       preview={preview}
-      metaKeywords={post.metaKeywords}
-      metaTitle={post && post.metaTitle ? post.metaTitle : post.title}
-      metaDescription={post.metaDescription}
-      openImage={post && post.openImage ? post.openImage : post.coverImage}
-      openTitle={post && post.openTitle ? post.openTitle : post.title}
-      openGraphDescription={post.openGraphDescription}
-      twitterTitle={post && post.twitterTitle ? post.twitterTitle : post.title}
-      twitterImage={
-        post && post.twitterImage ? post.twitterImage : post.coverImage
+      metaKeywords={post ? post.metaKeywords : ""}
+      metaTitle={post ? post.metaTitle || post.title : ""}
+      metaDescription={post ? post.metaDescription || post.excerpt : ""}
+      openImage={post ? post.openImage || post.coverImage : ""}
+      openTitle={post ? post.openTitle || post.title : ""}
+      openGraphDescription={
+        post ? post.openGraphDescription || post.excerpt : ""
       }
-      twitterDescription={post.twitterDescription}
+      twitterTitle={post ? post.twitterTitle || post.title : ""}
+      twitterImage={post ? post.twitterImage || post.coverImage : ""}
+      twitterDescription={post ? post.twitterDescription || post.excerpt : ""}
     >
       <Container>
         {router.isFallback ? (
@@ -38,12 +38,15 @@ export default function Post({ post, preview }) {
           <>
             <article className="mb-24 md:mb-32">
               <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                excerpt={post.excerpt}
-                date={post.date}
+                title={post && post.title}
+                coverImage={post && post.coverImage}
+                excerpt={post && post.excerpt}
+                date={post && post.date}
               />
-              <PostBody content={post.content} author={post.author} />
+              <PostBody
+                content={post && post.content}
+                author={post && post.author}
+              />
             </article>
           </>
         )}

@@ -23,27 +23,21 @@ export default function Listing({ listing, preview }) {
   return (
     <Layout
       preview={preview}
-      metaKeywords={listing.metaKeywords}
-      metaTitle={
-        listing && listing.metaTitle ? listing.metaTitle : listing.title
+      metaKeywords={listing ? listing.metaKeywords : ""}
+      metaTitle={listing ? listing.metaTitle || listing.title : ""}
+      metaDescription={
+        listing ? listing.metaDescription || listing.excerpt : ""
       }
-      metaDescription={listing.metaDescription}
-      openImage={
-        listing && listing.openImage ? listing.openImage : listing.coverImage
+      openImage={listing ? listing.openImage || listing.coverImage : ""}
+      openTitle={listing ? listing.openTitle || listing.title : ""}
+      openGraphDescription={
+        listing ? listing.openGraphDescription || listing.excerpt : ""
       }
-      openTitle={
-        listing && listing.openTitle ? listing.openTitle : listing.title
+      twitterTitle={listing ? listing.twitterTitle || listing.title : ""}
+      twitterImage={listing ? listing.twitterImage || listing.coverImage : ""}
+      twitterDescription={
+        listing ? listing.twitterDescription || listing.excerpt : ""
       }
-      openGraphDescription={listing.openGraphDescription}
-      twitterTitle={
-        listing && listing.twitterTitle ? listing.twitterTitle : listing.title
-      }
-      twitterImage={
-        listing && listing.twitterImage
-          ? listing.twitterImage
-          : listing.coverImage
-      }
-      twitterDescription={listing.twitterDescription}
     >
       <Container>
         {router.isFallback ? (
@@ -52,12 +46,12 @@ export default function Listing({ listing, preview }) {
           <>
             <article className="mb-24 md:mb-32">
               <ListingHeader
-                title={listing.title}
-                coverImage={listing.coverImage}
-                excerpt={listing.excerpt}
-                categories={listing.categories}
+                title={listing && listing.title}
+                coverImage={listing && listing.coverImage}
+                excerpt={listing && listing.excerpt}
+                categories={listing && listing.categories}
               />
-              <ListingBody content={listing.content} />
+              <ListingBody content={listing && listing.content} />
             </article>
           </>
         )}
