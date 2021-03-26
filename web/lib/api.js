@@ -103,6 +103,15 @@ const listingFields = `
   "categories": categories[].category->name,
   'slug': slug.current,
   'coverImage': coverImage.asset->url,
+  'metaKeywords': metaCard.metaKeywords,
+  'metaTitle': metaCard.metaTitle,
+  'metaDescription': metaCard.metaDescription,
+  'openImage': metaCard.openImage.asset->url,
+  'openTitle': metaCard.openTitle,
+  'openGraphDescription': metaCard.openGraphDescription,
+  'twitterImage': metaCard.twitterImage.asset->url,
+  'twitterTitle': metaCard.twitterTitle,
+  'twitterDescription': metaCard.twitterDescription,
 `;
 
 const getClientListings = (preview) => (preview ? previewClient : client);

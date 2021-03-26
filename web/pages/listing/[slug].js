@@ -21,7 +21,26 @@ export default function Listing({ listing, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout
+      preview={preview}
+      metaKeywords={listing.metaKeywords}
+      metaTitle={
+        listing && listing.metaTitle ? listing.metaTitle : listing.title
+      }
+      metaDescription={listing.metaDescription}
+      openImage={listing.openImage}
+      openTitle={
+        listing && listing.openTitle ? listing.openTitle : listing.title
+      }
+      openGraphDescription={listing.openGraphDescription}
+      twitterTitle={
+        listing.listing && listing.twitterTitle
+          ? listing.twitterTitle
+          : listing.title
+      }
+      twitterImage={listing.twitterImage}
+      twitterDescription={listing.twitterDescription}
+    >
       <Container>
         {router.isFallback ? (
           <ListingTitle>Loading…</ListingTitle>
