@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { DataContext } from "../pages/_app.js";
+
 import { CMS_NAME } from "../lib/constants";
 
 import Head from "next/head";
@@ -13,6 +16,18 @@ export default function Meta({
   twitterTitle,
   twitterDescription,
 }) {
+  const { aboutContent } = useContext(DataContext);
+
+  const defaultMetaKeywords = aboutContent[0].metaKeywords;
+  const defaultMetaTitle = aboutContent[0].metaTitle;
+  const defaultMetaDescription = aboutContent[0].metaDescription;
+  const defaultOpenImage = aboutContent[0].openImage;
+  const defaultOpenTitle = aboutContent[0].openTitle;
+  const defaultOpenGraphDescription = aboutContent[0].openGraphDescription;
+  const defaultTwitterImage = aboutContent[0].twitterImage;
+  const defaultTwitterTitle = aboutContent[0].twitterTitle;
+  const defaultTwitterDescription = aboutContent[0].twitterDescription;
+
   return (
     <Head>
       <link
@@ -47,12 +62,30 @@ export default function Meta({
       <meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width" />
       <meta property="og:locale" content="en_US" />
 
-      <meta name="keywords" content={metaKeywords} />
-      <meta name="title" content={metaTitle} />
-      <meta name="description" content={metaDescription} />
+      <meta
+        name="keywords"
+        content={
+          defaultMetaKeywords && metaKeywords
+            ? metaKeywords
+            : defaultMetaKeywords
+        }
+      />
+      <meta
+        name="title"
+        content={defaultMetaTitle && metaTitle ? metaTitle : defaultMetaTitle}
+      />
+      <meta
+        name="description"
+        content={
+          defaultMetaDescription && metaDescription
+            ? metaDescription
+            : defaultMetaDescription
+        }
+      />
 
       <title>
-        {metaTitle} - {CMS_NAME}
+        {defaultMetaTitle && metaTitle ? metaTitle : defaultMetaTitle} -{" "}
+        {CMS_NAME}
       </title>
 
       {/* <meta
@@ -65,16 +98,52 @@ export default function Meta({
         content={`${siteRoute}/${pagePath ? pagePath : ""}`}
       /> */}
 
-      <meta property="og:image" content={openImage} />
-      <meta property="og:title" content={`${openTitle}`} />
+      <meta
+        property="og:image"
+        content={defaultOpenImage && openImage ? openImage : defaultOpenImage}
+      />
+      <meta
+        property="og:title"
+        content={`${
+          defaultOpenTitle && openTitle ? openTitle : defaultOpenTitle
+        }`}
+      />
       <meta property="og:site_name" content={CMS_NAME} />
-      <meta property="og:description" content={openGraphDescription} />
+      <meta
+        property="og:description"
+        content={
+          defaultOpenGraphDescription && openGraphDescription
+            ? openGraphDescription
+            : defaultOpenGraphDescription
+        }
+      />
 
       <meta name="twitter:site" content={`@${CMS_NAME}`} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image:src" content={twitterImage} />
-      <meta name="twitter:title" content={`${twitterTitle}`} />
-      <meta name="twitter:description" content={twitterDescription} />
+      <meta
+        name="twitter:image:src"
+        content={
+          defaultTwitterImage && twitterImage
+            ? twitterImage
+            : defaultTwitterImage
+        }
+      />
+      <meta
+        name="twitter:title"
+        content={`${
+          defaultTwitterTitle && twitterTitle
+            ? twitterTitle
+            : defaultTwitterTitle
+        }`}
+      />
+      <meta
+        name="twitter:description"
+        content={
+          defaultTwitterDescription && twitterDescription
+            ? twitterDescription
+            : defaultTwitterDescription
+        }
+      />
     </Head>
   );
 }

@@ -27,7 +27,6 @@ export default function Index({ allPosts, preview }) {
             />
           )}
           {morePosts.length > 0 && <MorePosts posts={morePosts} />}
-          {console.log(allPosts)}
         </Container>
       </Layout>
     </>

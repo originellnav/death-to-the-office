@@ -68,6 +68,11 @@ export default {
       title: "Mission",
       type: "portableText",
     },
+    {
+      name: "metaCard",
+      title: "Meta",
+      type: "metaCard",
+    },
   ],
   preview: {
     select: {
