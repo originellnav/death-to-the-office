@@ -20,12 +20,14 @@ export default function Post({ post, preview }) {
     <Layout
       preview={preview}
       metaKeywords={post.metaKeywords}
-      metaTitle={post.metaTitle}
+      metaTitle={post && post.metaTitle ? post.metaTitle : post.title}
       metaDescription={post.metaDescription}
       openImage={post.openImage}
-      openTitle={post.openTitle}
+      openTitle={post && post.openTitle ? post.openTitle : post.title}
       openGraphDescription={post.openGraphDescription}
-      twitterTitle={post.twitterTitle}
+      twitterTitle={
+        post.post && post.twitterTitle ? post.twitterTitle : post.title
+      }
       twitterImage={post.twitterImage}
       twitterDescription={post.twitterDescription}
     >
