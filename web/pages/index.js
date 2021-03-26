@@ -16,7 +16,12 @@ export default function Index({
 }) {
   return (
     <>
-      <Layout preview={preview}>
+      <Layout
+        preview={preview}
+        metaTitle={allAbout[0].homepageHeader}
+        twitterTitle={allAbout[0].homepageHeader}
+        openTitle={allAbout[0].homepageHeader}
+      >
         <Intro
           heading={allAbout[0].homepageHeader}
           text={allAbout[0].homepageSubheader}

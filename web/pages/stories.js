@@ -14,7 +14,12 @@ export default function Index({ allPosts, preview }) {
 
   return (
     <>
-      <Layout preview={preview}>
+      <Layout
+        preview={preview}
+        metaTitle="Stories"
+        twitterTitle="Stories"
+        openTitle="Stories"
+      >
         <Container>
           {heroPost && (
             <HeroPost

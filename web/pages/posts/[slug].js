@@ -22,13 +22,13 @@ export default function Post({ post, preview }) {
       metaKeywords={post.metaKeywords}
       metaTitle={post && post.metaTitle ? post.metaTitle : post.title}
       metaDescription={post.metaDescription}
-      openImage={post.openImage}
+      openImage={post && post.openImage ? post.openImage : post.coverImage}
       openTitle={post && post.openTitle ? post.openTitle : post.title}
       openGraphDescription={post.openGraphDescription}
-      twitterTitle={
-        post.post && post.twitterTitle ? post.twitterTitle : post.title
+      twitterTitle={post && post.twitterTitle ? post.twitterTitle : post.title}
+      twitterImage={
+        post && post.twitterImage ? post.twitterImage : post.coverImage
       }
-      twitterImage={post.twitterImage}
       twitterDescription={post.twitterDescription}
     >
       <Container>

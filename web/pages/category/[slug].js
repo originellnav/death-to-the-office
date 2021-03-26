@@ -45,7 +45,12 @@ export default function Categories({
     );
 
   return (
-    <Layout preview={preview}>
+    <Layout
+      preview={preview}
+      metaTitle={formattedSlug}
+      twitterTitle={formattedSlug}
+      openTitle={formattedSlug}
+    >
       <Intro
         subheading={`Showing ${filteredItems.length} locations tagged`}
         category={formattedSlug}

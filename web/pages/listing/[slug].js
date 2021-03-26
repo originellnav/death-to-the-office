@@ -28,17 +28,21 @@ export default function Listing({ listing, preview }) {
         listing && listing.metaTitle ? listing.metaTitle : listing.title
       }
       metaDescription={listing.metaDescription}
-      openImage={listing.openImage}
+      openImage={
+        listing && listing.openImage ? listing.openImage : listing.coverImage
+      }
       openTitle={
         listing && listing.openTitle ? listing.openTitle : listing.title
       }
       openGraphDescription={listing.openGraphDescription}
       twitterTitle={
-        listing.listing && listing.twitterTitle
-          ? listing.twitterTitle
-          : listing.title
+        listing && listing.twitterTitle ? listing.twitterTitle : listing.title
       }
-      twitterImage={listing.twitterImage}
+      twitterImage={
+        listing && listing.twitterImage
+          ? listing.twitterImage
+          : listing.coverImage
+      }
       twitterDescription={listing.twitterDescription}
     >
       <Container>

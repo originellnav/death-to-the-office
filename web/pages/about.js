@@ -30,7 +30,7 @@ export default function Index({ allAbout, preview }) {
 
   return (
     <>
-      <Layout preview={preview}>
+      <Layout preview={preview} metaTitle="About">
         <Container>
           <div className="grid grid-cols-12">
             <div className="col-span-12 md:col-span-4 md:mb-16 block-content">
