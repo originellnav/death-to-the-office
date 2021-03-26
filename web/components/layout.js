@@ -9,10 +9,29 @@ export default function Layout({
   header,
   footer,
   className,
+  metaKeywords,
+  metaTitle,
+  metaDescription,
+  openImage,
+  openTitle,
+  openGraphDescription,
+  twitterTitle,
+  twitterImage,
+  twitterDescription,
 }) {
   return (
     <>
-      <Meta />
+      <Meta
+        metaKeywords={metaKeywords}
+        metaTitle={metaTitle}
+        metaDescription={metaDescription}
+        openImage={openImage}
+        openTitle={openTitle}
+        openGraphDescription={openGraphDescription}
+        twitterTitle={twitterTitle}
+        twitterImage={twitterImage}
+        twitterDescription={twitterDescription}
+      />
       <div className={`min-h-screen ${className}`}>
         <Alert preview={preview} />
         {header && header === "hide" ? null : <Header />}

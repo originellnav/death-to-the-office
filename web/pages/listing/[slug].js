@@ -28,12 +28,6 @@ export default function Listing({ listing, preview }) {
         ) : (
           <>
             <article className="mb-24 md:mb-32">
-              <Head>
-                <title>
-                  {listing.title} - {CMS_NAME}
-                </title>
-                {/* <meta property="og:image" content={listing.ogImage.url} /> */}
-              </Head>
               <ListingHeader
                 title={listing.title}
                 coverImage={listing.coverImage}

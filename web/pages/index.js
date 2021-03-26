@@ -7,9 +7,6 @@ import {
   getAllCategories,
   getAllListingsForHome,
 } from "../lib/api";
-import { CMS_NAME } from "../lib/constants";
-
-import Head from "next/head";
 
 export default function Index({
   allListings,
@@ -20,9 +17,6 @@ export default function Index({
   return (
     <>
       <Layout preview={preview}>
-        <Head>
-          <title>Locations - {CMS_NAME}</title>
-        </Head>
         <Intro
           heading={allAbout[0].homepageHeader}
           text={allAbout[0].homepageSubheader}

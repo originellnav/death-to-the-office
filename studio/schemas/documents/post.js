@@ -42,6 +42,11 @@ export default {
         source: "title",
       },
     },
+    {
+      name: "metaCard",
+      title: "Meta",
+      type: "metaCard",
+    },
   ],
   preview: {
     select: {

@@ -46,11 +46,6 @@ export default function Categories({
 
   return (
     <Layout preview={preview}>
-      <Head>
-        <title>
-          {formattedSlug} - {CMS_NAME}
-        </title>
-      </Head>
       <Intro
         subheading={`Showing ${filteredItems.length} locations tagged`}
         category={formattedSlug}

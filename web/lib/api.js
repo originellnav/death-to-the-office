@@ -15,6 +15,16 @@ const getUniquePosts = (posts) => {
 };
 
 const postFields = `
+  metaCard,
+  'metaKeywords': metaCard.metaKeywords,
+  'metaTitle': metaCard.metaTitle,
+  'metaDescription': metaCard.metaDescription,
+  'openImage': metaCard.openImage.asset->url,
+  'openTitle': metaCard.openTitle,
+  'openGraphDescription': metaCard.openGraphDescription,
+  'twitterImage': metaCard.twitterImage.asset->url,
+  'twitterTitle': metaCard.twitterTitle,
+  'twitterDescription': metaCard.twitterDescription,
   name,
   title,
   date,
@@ -22,6 +32,7 @@ const postFields = `
   'slug': slug.current,
   'coverImage': coverImage.asset->url,
   'author': author->{name, 'picture': picture.asset->url},
+
 `;
 
 const getClientPosts = (preview) => (preview ? previewClient : client);

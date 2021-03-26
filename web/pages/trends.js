@@ -17,9 +17,6 @@ export default function Index({ preview }) {
         footer="hide"
         className="dark bg-black"
       >
-        <Head>
-          <title>Trends - {CMS_NAME}</title>
-        </Head>
         <div className="container mx-auto flex flex-col justify-center h-screen relative px-6 overflow-hidden">
           <nav className="absolute top-0 left-0 py-12 px-6">
             <Link href="/">

@@ -15,9 +15,6 @@ export default function Index({ allPosts, preview }) {
   return (
     <>
       <Layout preview={preview}>
-        <Head>
-          <title>Stories - {CMS_NAME}</title>
-        </Head>
         <Container>
           {heroPost && (
             <HeroPost
@@ -30,6 +27,7 @@ export default function Index({ allPosts, preview }) {
             />
           )}
           {morePosts.length > 0 && <MorePosts posts={morePosts} />}
+          {console.log(allPosts)}
         </Container>
       </Layout>
     </>

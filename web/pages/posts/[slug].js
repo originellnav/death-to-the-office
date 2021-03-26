@@ -1,15 +1,14 @@
 import Container from "../../components/container";
 import Layout from "../../components/layout";
+import Meta from "../../components/meta";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import PostTitle from "../../components/post-title";
 
-import Head from "next/head";
 import ErrorPage from "next/error";
 import { useRouter } from "next/router";
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
-import { CMS_NAME } from "../../lib/constants";
 
 export default function Post({ post, preview }) {
   const router = useRouter();
@@ -18,19 +17,24 @@ export default function Post({ post, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout
+      preview={preview}
+      metaKeywords={post.metaKeywords}
+      metaTitle={post.metaTitle}
+      metaDescription={post.metaDescription}
+      openImage={post.openImage}
+      openTitle={post.openTitle}
+      openGraphDescription={post.openGraphDescription}
+      twitterTitle={post.twitterTitle}
+      twitterImage={post.twitterImage}
+      twitterDescription={post.twitterDescription}
+    >
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
             <article className="mb-24 md:mb-32">
-              <Head>
-                <title>
-                  {post.title} - {CMS_NAME}
-                </title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
