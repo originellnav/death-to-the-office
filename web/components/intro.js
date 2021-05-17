@@ -6,7 +6,7 @@ export default function Intro({ heading, subheading, text, category, center }) {
       <Container>
         {heading && (
           <h2
-            className={`font-body text-4xl md:text-5xl ${
+            className={`font-body text-4xl md:text-5xl leading-10 mb-2 ${
               center && "text-center"
             }`}
           >
